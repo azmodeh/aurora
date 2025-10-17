@@ -106,7 +106,7 @@ const Dashboard = () => {
 
       {/* Action Buttons */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Card className="bg-[#1a1a1a] border-[#2a2a2a] hover:border-purple-500/50 transition-all duration-300 cursor-pointer group rounded-xl relative overflow-hidden">
+        <Card className="bg-[#1a1a1a] border-teal-500/30 hover:border-teal-500 transition-all duration-300 cursor-pointer group rounded-xl relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500" />
           <CardContent className="p-5 flex flex-col items-center text-center space-y-3 relative z-10">
             <div className="w-14 h-14 bg-gradient-to-br from-purple-600/30 to-teal-500/30 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/30">
@@ -125,7 +125,7 @@ const Dashboard = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-[#1a1a1a] border-[#2a2a2a] hover:border-teal-500/50 transition-all duration-300 cursor-pointer group rounded-xl relative overflow-hidden">
+        <Card className="bg-[#1a1a1a] border-teal-500/30 hover:border-teal-500 transition-all duration-300 cursor-pointer group rounded-xl relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-all duration-500" />
           <CardContent className="p-5 flex flex-col items-center text-center space-y-3 relative z-10">
             <div className="w-14 h-14 bg-gradient-to-br from-teal-500/30 to-purple-600/30 rounded-xl flex items-center justify-center shadow-lg shadow-teal-500/30">
@@ -144,7 +144,7 @@ const Dashboard = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-[#1a1a1a] border-[#2a2a2a] hover:border-purple-500/50 transition-all duration-300 cursor-pointer group rounded-xl relative overflow-hidden">
+        <Card className="bg-[#1a1a1a] border-teal-500/30 hover:border-teal-500 transition-all duration-300 cursor-pointer group rounded-xl relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500" />
           <CardContent className="p-5 flex flex-col items-center text-center space-y-3 relative z-10">
             <div className="w-14 h-14 bg-gradient-to-br from-purple-600/30 to-teal-500/30 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/30">
