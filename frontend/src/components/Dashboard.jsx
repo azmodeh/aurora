@@ -20,23 +20,23 @@ const Dashboard = () => {
   return (
     <div className="space-y-6">
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((stat, index) => (
-          <Card key={index} className="bg-slate-800/50 backdrop-blur-lg border-slate-700/50 hover:border-teal-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/10 rounded-2xl">
-            <CardContent className="p-6">
+          <Card key={index} className="bg-[#1a1d2e] border-[#2a2d3e] hover:border-purple-500/30 transition-all duration-300 rounded-xl">
+            <CardContent className="p-5">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-slate-400 text-sm font-medium mb-1">{stat.label}</p>
-                  <h3 className="text-3xl font-bold text-white mb-1">{stat.value}</h3>
-                  <span className="text-teal-400 text-sm font-medium">{stat.change}</span>
+                  <p className="text-slate-500 text-xs font-medium mb-2">{stat.label}</p>
+                  <h3 className="text-2xl font-bold text-white mb-1">{stat.value}</h3>
+                  <span className="text-green-400 text-xs font-medium">{stat.change}</span>
                 </div>
-                <div className="w-14 h-14 bg-slate-700/50 rounded-2xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-[#252836] rounded-xl flex items-center justify-center">
                   <lord-icon
                     src={`https://cdn.lordicon.com/${stat.icon}.json`}
                     trigger="loop"
                     delay="2000"
-                    colors="primary:#319795"
-                    style={{ width: '36px', height: '36px' }}
+                    colors="primary:#6366f1"
+                    style={{ width: '28px', height: '28px' }}
                   />
                 </div>
               </div>
@@ -46,53 +46,53 @@ const Dashboard = () => {
       </div>
 
       {/* Main Content Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Network Activity */}
-        <Card className="lg:col-span-2 bg-slate-800/50 backdrop-blur-lg border-slate-700/50 rounded-2xl">
+        <Card className="lg:col-span-2 bg-[#1a1d2e] border-[#2a2d3e] rounded-xl">
           <CardHeader>
-            <CardTitle className="text-white flex items-center space-x-2">
+            <CardTitle className="text-white flex items-center space-x-2 text-base">
               <lord-icon
                 src="https://cdn.lordicon.com/xzksbhzh.json"
                 trigger="loop"
                 delay="3000"
-                colors="primary:#319795"
-                style={{ width: '28px', height: '28px' }}
+                colors="primary:#6366f1"
+                style={{ width: '24px', height: '24px' }}
               />
               <span>Network Activity</span>
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="h-64 flex items-center justify-center bg-slate-900/50 rounded-2xl border border-slate-700/50">
-              <p className="text-slate-500">Network visualization will be displayed here</p>
+            <div className="h-64 flex items-center justify-center bg-[#252836] rounded-xl">
+              <p className="text-slate-600">Network visualization will be displayed here</p>
             </div>
           </CardContent>
         </Card>
 
         {/* Recent Activities */}
-        <Card className="bg-slate-800/50 backdrop-blur-lg border-slate-700/50 rounded-2xl">
+        <Card className="bg-[#1a1d2e] border-[#2a2d3e] rounded-xl">
           <CardHeader>
-            <CardTitle className="text-white flex items-center space-x-2">
+            <CardTitle className="text-white flex items-center space-x-2 text-base">
               <lord-icon
                 src="https://cdn.lordicon.com/nocovwne.json"
                 trigger="loop"
                 delay="3000"
-                colors="primary:#319795"
-                style={{ width: '28px', height: '28px' }}
+                colors="primary:#6366f1"
+                style={{ width: '24px', height: '24px' }}
               />
               <span>Recent Activities</span>
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
+            <div className="space-y-3">
               {recentActivities.map((activity, index) => (
-                <div key={index} className="flex items-start space-x-3 p-3 rounded-xl bg-slate-900/50 hover:bg-slate-700/30 transition-all duration-300">
+                <div key={index} className="flex items-start space-x-3 p-3 rounded-lg bg-[#252836] hover:bg-[#2a2d3e] transition-all duration-300">
                   <div className={`w-2 h-2 rounded-full mt-2 ${
-                    activity.type === 'success' ? 'bg-teal-500' :
+                    activity.type === 'success' ? 'bg-green-500' :
                     activity.type === 'error' ? 'bg-red-500' : 'bg-purple-500'
                   }`} />
                   <div className="flex-1">
                     <p className="text-white text-sm font-medium">{activity.action}</p>
-                    <p className="text-slate-400 text-xs mt-1">{activity.time}</p>
+                    <p className="text-slate-500 text-xs mt-1">{activity.time}</p>
                   </div>
                 </div>
               ))}
@@ -102,56 +102,56 @@ const Dashboard = () => {
       </div>
 
       {/* Action Buttons */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="bg-slate-800/50 backdrop-blur-lg border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 cursor-pointer group rounded-2xl">
-          <CardContent className="p-6 flex flex-col items-center text-center space-y-3">
-            <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <Card className="bg-[#1a1d2e] border-[#2a2d3e] hover:border-purple-500/30 transition-all duration-300 cursor-pointer group rounded-xl">
+          <CardContent className="p-5 flex flex-col items-center text-center space-y-3">
+            <div className="w-14 h-14 bg-[#252836] rounded-xl flex items-center justify-center">
               <lord-icon
                 src="https://cdn.lordicon.com/gqdnbnwt.json"
                 trigger="hover"
-                colors="primary:#9B59B6"
-                style={{ width: '40px', height: '40px' }}
+                colors="primary:#6366f1"
+                style={{ width: '32px', height: '32px' }}
               />
             </div>
-            <h4 className="text-white font-semibold text-lg">Create New Tunnel</h4>
-            <p className="text-slate-400 text-sm">Set up a secure tunnel connection</p>
-            <Button className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-xl">
+            <h4 className="text-white font-semibold text-base">Create New Tunnel</h4>
+            <p className="text-slate-500 text-xs">Set up a secure tunnel connection</p>
+            <Button className="w-full bg-[#6366f1] hover:bg-[#5558d9] text-white rounded-lg text-sm py-2">
               Create
             </Button>
           </CardContent>
         </Card>
 
-        <Card className="bg-slate-800/50 backdrop-blur-lg border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 cursor-pointer group rounded-2xl">
-          <CardContent className="p-6 flex flex-col items-center text-center space-y-3">
-            <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center">
+        <Card className="bg-[#1a1d2e] border-[#2a2d3e] hover:border-purple-500/30 transition-all duration-300 cursor-pointer group rounded-xl">
+          <CardContent className="p-5 flex flex-col items-center text-center space-y-3">
+            <div className="w-14 h-14 bg-[#252836] rounded-xl flex items-center justify-center">
               <lord-icon
                 src="https://cdn.lordicon.com/jvihlqtw.json"
                 trigger="hover"
-                colors="primary:#9B59B6"
-                style={{ width: '40px', height: '40px' }}
+                colors="primary:#6366f1"
+                style={{ width: '32px', height: '32px' }}
               />
             </div>
-            <h4 className="text-white font-semibold text-lg">Deploy Application</h4>
-            <p className="text-slate-400 text-sm">Deploy a new application instance</p>
-            <Button className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-xl">
+            <h4 className="text-white font-semibold text-base">Deploy Application</h4>
+            <p className="text-slate-500 text-xs">Deploy a new application instance</p>
+            <Button className="w-full bg-[#6366f1] hover:bg-[#5558d9] text-white rounded-lg text-sm py-2">
               Deploy
             </Button>
           </CardContent>
         </Card>
 
-        <Card className="bg-slate-800/50 backdrop-blur-lg border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 cursor-pointer group rounded-2xl">
-          <CardContent className="p-6 flex flex-col items-center text-center space-y-3">
-            <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center">
+        <Card className="bg-[#1a1d2e] border-[#2a2d3e] hover:border-purple-500/30 transition-all duration-300 cursor-pointer group rounded-xl">
+          <CardContent className="p-5 flex flex-col items-center text-center space-y-3">
+            <div className="w-14 h-14 bg-[#252836] rounded-xl flex items-center justify-center">
               <lord-icon
                 src="https://cdn.lordicon.com/hrjifpbq.json"
                 trigger="hover"
-                colors="primary:#9B59B6"
-                style={{ width: '40px', height: '40px' }}
+                colors="primary:#6366f1"
+                style={{ width: '32px', height: '32px' }}
               />
             </div>
-            <h4 className="text-white font-semibold text-lg">Add User</h4>
-            <p className="text-slate-400 text-sm">Create a new user account</p>
-            <Button className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-xl">
+            <h4 className="text-white font-semibold text-base">Add User</h4>
+            <p className="text-slate-500 text-xs">Create a new user account</p>
+            <Button className="w-full bg-[#6366f1] hover:bg-[#5558d9] text-white rounded-lg text-sm py-2">
               Add User
             </Button>
           </CardContent>
