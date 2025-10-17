@@ -22,7 +22,7 @@ const Dashboard = () => {
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((stat, index) => (
-          <Card key={index} className="bg-[#1a1a1a] border-[#2a2a2a] hover:border-teal-500/50 transition-all duration-300 rounded-xl relative overflow-hidden group">
+          <Card key={index} className="bg-[#1a1a1a] border-teal-500/30 hover:border-teal-500 transition-all duration-300 rounded-xl relative overflow-hidden group">
             <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-all duration-500" />
             <CardContent className="p-5 relative z-10">
               <div className="flex items-center justify-between">
@@ -49,7 +49,7 @@ const Dashboard = () => {
       {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Network Activity */}
-        <Card className="lg:col-span-2 bg-[#1a1a1a] border-[#2a2a2a] rounded-xl relative overflow-hidden">
+        <Card className="lg:col-span-2 bg-[#1a1a1a] border-teal-500/30 rounded-xl relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 via-teal-500 to-purple-600 opacity-50" />
           <CardHeader>
             <CardTitle className="text-white flex items-center space-x-2 text-base">
@@ -71,7 +71,7 @@ const Dashboard = () => {
         </Card>
 
         {/* Recent Activities */}
-        <Card className="bg-[#1a1a1a] border-[#2a2a2a] rounded-xl relative overflow-hidden">
+        <Card className="bg-[#1a1a1a] border-teal-500/30 rounded-xl relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500 to-purple-600 opacity-50" />
           <CardHeader>
             <CardTitle className="text-white flex items-center space-x-2 text-base">
