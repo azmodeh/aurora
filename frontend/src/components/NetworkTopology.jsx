@@ -46,7 +46,7 @@ const NetworkTopology = () => {
     <div className="space-y-6">
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card className="bg-[#1a1a1a] border-[#2a2a2a] rounded-xl relative overflow-hidden group">
+        <Card className="bg-[#1a1a1a] border-teal-500/30 rounded-xl relative overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-all duration-500" />
           <CardContent className="p-5 relative z-10">
             <div className="flex items-center justify-between">
@@ -61,7 +61,7 @@ const NetworkTopology = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-[#1a1a1a] border-[#2a2a2a] rounded-xl relative overflow-hidden group">
+        <Card className="bg-[#1a1a1a] border-teal-500/30 rounded-xl relative overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-all duration-500" />
           <CardContent className="p-5 relative z-10">
             <div className="flex items-center justify-between">
@@ -76,7 +76,7 @@ const NetworkTopology = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-[#1a1a1a] border-[#2a2a2a] rounded-xl relative overflow-hidden group">
+        <Card className="bg-[#1a1a1a] border-teal-500/30 rounded-xl relative overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-all duration-500" />
           <CardContent className="p-5 relative z-10">
             <div className="flex items-center justify-between">
@@ -91,7 +91,7 @@ const NetworkTopology = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-[#1a1a1a] border-[#2a2a2a] rounded-xl relative overflow-hidden group">
+        <Card className="bg-[#1a1a1a] border-teal-500/30 rounded-xl relative overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-all duration-500" />
           <CardContent className="p-5 relative z-10">
             <div className="flex items-center justify-between">
@@ -108,7 +108,7 @@ const NetworkTopology = () => {
       </div>
 
       {/* Topology Map */}
-      <Card className="bg-[#1a1a1a] border-[#2a2a2a] rounded-xl relative overflow-hidden">
+      <Card className="bg-[#1a1a1a] border-teal-500/30 rounded-xl relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 via-teal-500 to-purple-600 opacity-50" />
         <CardHeader>
           <CardTitle className="text-white flex items-center justify-between">
@@ -117,14 +117,14 @@ const NetworkTopology = () => {
               <Button className="bg-gradient-to-r from-purple-600 to-teal-500 hover:from-purple-700 hover:to-teal-600 text-white rounded-lg text-sm px-4 py-2 shadow-lg shadow-purple-500/30">
                 + Add Node
               </Button>
-              <Button variant="outline" className="border-[#2a2a2a] bg-[#0f0f0f] text-slate-300 hover:bg-gradient-to-r hover:from-purple-600/20 hover:to-teal-500/20 rounded-lg text-sm px-4 py-2">
+              <Button variant="outline" className="border-teal-500/30 bg-[#0f0f0f] text-slate-300 hover:bg-gradient-to-r hover:from-purple-600/20 hover:to-teal-500/20 rounded-lg text-sm px-4 py-2">
                 Refresh
               </Button>
             </div>
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="relative h-[600px] bg-[#0a0a0a] rounded-xl overflow-hidden border border-[#2a2a2a]">
+          <div className="relative h-[600px] bg-[#0a0a0a] rounded-xl overflow-hidden border border-teal-500/30">
             {/* Background Grid with Aurora effect */}
             <div className="absolute inset-0" style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none'/%3E%3Cpath d='M0 50h100M50 0v100' stroke='%231a1a1a' stroke-width='0.5' opacity='0.5'/%3E%3C/svg%3E")`,
@@ -171,7 +171,7 @@ const NetworkTopology = () => {
                 <div className="text-center">
                   <div className="text-white font-bold text-lg">{dc.load}%</div>
                   <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                    <span className="text-white text-xs font-medium bg-[#1a1a1a] px-2 py-1 rounded-lg border border-[#2a2a2a]">
+                    <span className="text-white text-xs font-medium bg-[#1a1a1a] px-2 py-1 rounded-lg border border-teal-500/30">
                       {dc.name}
                     </span>
                   </div>
@@ -180,7 +180,7 @@ const NetworkTopology = () => {
             ))}
 
             {/* Legend */}
-            <div className="absolute top-4 right-4 bg-[#1a1a1a] rounded-xl p-4 border border-[#2a2a2a]">
+            <div className="absolute top-4 right-4 bg-[#1a1a1a] rounded-xl p-4 border border-teal-500/30">
               <h4 className="text-white font-semibold mb-3 text-sm">Status</h4>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
