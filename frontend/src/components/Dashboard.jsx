@@ -64,7 +64,7 @@ const Dashboard = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="h-64 flex items-center justify-center bg-[#0f0f0f] rounded-xl border border-[#2a2a2a]">
+            <div className="h-64 flex items-center justify-center bg-[#0f0f0f] rounded-xl border border-teal-500/20">
               <p className="text-slate-600">Network visualization will be displayed here</p>
             </div>
           </CardContent>
@@ -88,7 +88,7 @@ const Dashboard = () => {
           <CardContent>
             <div className="space-y-3">
               {recentActivities.map((activity, index) => (
-                <div key={index} className="flex items-start space-x-3 p-3 rounded-lg bg-[#0f0f0f] hover:bg-gradient-to-r hover:from-purple-600/10 hover:to-teal-500/10 transition-all duration-300 border border-transparent hover:border-purple-500/20">
+                <div key={index} className="flex items-start space-x-3 p-3 rounded-lg bg-[#0f0f0f] hover:bg-gradient-to-r hover:from-purple-600/10 hover:to-teal-500/10 transition-all duration-300 border border-teal-500/10 hover:border-teal-500/30">
                   <div className={`w-2 h-2 rounded-full mt-2 ${
                     activity.type === 'success' ? 'bg-teal-500 shadow-lg shadow-teal-500/50' :
                     activity.type === 'error' ? 'bg-red-500 shadow-lg shadow-red-500/50' : 'bg-purple-500 shadow-lg shadow-purple-500/50'
