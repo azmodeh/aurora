@@ -45,57 +45,57 @@ const NetworkTopology = () => {
   return (
     <div className="space-y-6">
       {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <Card className="bg-slate-800/50 backdrop-blur-lg border-slate-700/50 rounded-2xl">
-          <CardContent className="p-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <Card className="bg-[#1a1d2e] border-[#2a2d3e] rounded-xl">
+          <CardContent className="p-5">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-slate-400 text-sm font-medium mb-1">Total Devices</p>
-                <h3 className="text-3xl font-bold text-white">9</h3>
+                <p className="text-slate-500 text-xs font-medium mb-1">Total Devices</p>
+                <h3 className="text-2xl font-bold text-white">9</h3>
               </div>
-              <div className="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#252836] rounded-xl flex items-center justify-center">
                 <span className="text-2xl">📡</span>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        <Card className="bg-slate-800/50 backdrop-blur-lg border-slate-700/50 rounded-2xl">
-          <CardContent className="p-6">
+        <Card className="bg-[#1a1d2e] border-[#2a2d3e] rounded-xl">
+          <CardContent className="p-5">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-slate-400 text-sm font-medium mb-1">Links</p>
-                <h3 className="text-3xl font-bold text-white">25</h3>
+                <p className="text-slate-500 text-xs font-medium mb-1">Links</p>
+                <h3 className="text-2xl font-bold text-white">25</h3>
               </div>
-              <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#252836] rounded-xl flex items-center justify-center">
                 <span className="text-2xl">🔗</span>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        <Card className="bg-slate-800/50 backdrop-blur-lg border-slate-700/50 rounded-2xl">
-          <CardContent className="p-6">
+        <Card className="bg-[#1a1d2e] border-[#2a2d3e] rounded-xl">
+          <CardContent className="p-5">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-slate-400 text-sm font-medium mb-1">Hosts</p>
-                <h3 className="text-3xl font-bold text-white">9</h3>
+                <p className="text-slate-500 text-xs font-medium mb-1">Hosts</p>
+                <h3 className="text-2xl font-bold text-white">9</h3>
               </div>
-              <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#252836] rounded-xl flex items-center justify-center">
                 <span className="text-2xl">🖥️</span>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        <Card className="bg-slate-800/50 backdrop-blur-lg border-slate-700/50 rounded-2xl">
-          <CardContent className="p-6">
+        <Card className="bg-[#1a1d2e] border-[#2a2d3e] rounded-xl">
+          <CardContent className="p-5">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-slate-400 text-sm font-medium mb-1">Network Health</p>
-                <h3 className="text-3xl font-bold text-white">87%</h3>
+                <p className="text-slate-500 text-xs font-medium mb-1">Network Health</p>
+                <h3 className="text-2xl font-bold text-white">87%</h3>
               </div>
-              <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#252836] rounded-xl flex items-center justify-center">
                 <span className="text-2xl">✅</span>
               </div>
             </div>
@@ -104,25 +104,25 @@ const NetworkTopology = () => {
       </div>
 
       {/* Topology Map */}
-      <Card className="bg-slate-800/50 backdrop-blur-lg border-slate-700/50 rounded-2xl">
+      <Card className="bg-[#1a1d2e] border-[#2a2d3e] rounded-xl">
         <CardHeader>
           <CardTitle className="text-white flex items-center justify-between">
-            <span className="text-2xl font-bold">Network Topology</span>
+            <span className="text-lg font-bold">Network Topology</span>
             <div className="flex items-center space-x-2">
-              <Button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-xl">
+              <Button className="bg-[#6366f1] hover:bg-[#5558d9] text-white rounded-lg text-sm px-4 py-2">
                 + Add Node
               </Button>
-              <Button variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-700 rounded-xl">
+              <Button variant="outline" className="border-[#2a2d3e] text-slate-300 hover:bg-[#252836] rounded-lg text-sm px-4 py-2">
                 Refresh
               </Button>
             </div>
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="relative h-[600px] bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-700/50">
+          <div className="relative h-[600px] bg-[#0f1117] rounded-xl overflow-hidden">
             {/* Background Map */}
             <div className="absolute inset-0" style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none'/%3E%3Cpath d='M0 50h100M50 0v100' stroke='%23334155' stroke-width='0.5' opacity='0.3'/%3E%3C/svg%3E")`,
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none'/%3E%3Cpath d='M0 50h100M50 0v100' stroke='%231a1d2e' stroke-width='0.5' opacity='0.3'/%3E%3C/svg%3E")`,
               backgroundSize: '50px 50px'
             }} />
 
@@ -173,20 +173,20 @@ const NetworkTopology = () => {
             ))}
 
             {/* Legend */}
-            <div className="absolute top-4 right-4 bg-slate-800/80 backdrop-blur-lg rounded-xl p-4 border border-slate-700/50">
-              <h4 className="text-white font-semibold mb-3">Status</h4>
+            <div className="absolute top-4 right-4 bg-[#1a1d2e] rounded-xl p-4 border border-[#2a2d3e]">
+              <h4 className="text-white font-semibold mb-3 text-sm">Status</h4>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 rounded-full bg-blue-500" />
-                  <span className="text-slate-300 text-xs">Normal (0-15%)</span>
+                  <span className="text-slate-400 text-xs">Normal (0-15%)</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 rounded-full bg-orange-500" />
-                  <span className="text-slate-300 text-xs">Warning (15-50%)</span>
+                  <span className="text-slate-400 text-xs">Warning (15-50%)</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 rounded-full bg-red-500" />
-                  <span className="text-slate-300 text-xs">Critical (>50%)</span>
+                  <span className="text-slate-400 text-xs">Critical (>50%)</span>
                 </div>
               </div>
             </div>
