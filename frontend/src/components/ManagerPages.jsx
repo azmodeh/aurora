@@ -2,13 +2,19 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 
-const ManagerPage = ({ title, emoji, items, actions }) => {
+const ManagerPage = ({ title, icon, items, actions }) => {
   return (
     <div className="space-y-6">
       {/* Page Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <span className="text-5xl">{emoji}</span>
+          <lord-icon
+            src={`https://cdn.lordicon.com/${icon}.json`}
+            trigger="loop"
+            delay="2000"
+            colors="primary:#319795"
+            style={{ width: '48px', height: '48px' }}
+          />
           <h2 className="text-3xl font-bold text-white">{title}</h2>
         </div>
         <Button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-xl shadow-lg shadow-purple-500/30">
@@ -23,7 +29,12 @@ const ManagerPage = ({ title, emoji, items, actions }) => {
             <CardContent className="p-6">
               <div className="flex items-center space-x-4">
                 <div className="p-3 bg-slate-900/50 rounded-2xl group-hover:bg-gradient-to-br group-hover:from-teal-500/20 group-hover:to-purple-600/20 transition-all duration-300">
-                  <span className="text-3xl">{action.emoji}</span>
+                  <lord-icon
+                    src={`https://cdn.lordicon.com/${action.icon}.json`}
+                    trigger="hover"
+                    colors="primary:#319795"
+                    style={{ width: '32px', height: '32px' }}
+                  />
                 </div>
                 <div className="flex-1">
                   <h4 className="text-white font-semibold text-lg mb-1">{action.label}</h4>
@@ -75,10 +86,20 @@ const ManagerPage = ({ title, emoji, items, actions }) => {
                     <td className="py-4 px-4">
                       <div className="flex items-center justify-end space-x-2">
                         <button className="p-2 hover:bg-slate-600/50 rounded-xl transition-all duration-300">
-                          <span className="text-lg">✏️</span>
+                          <lord-icon
+                            src="https://cdn.lordicon.com/wuvorxbv.json"
+                            trigger="hover"
+                            colors="primary:#319795"
+                            style={{ width: '20px', height: '20px' }}
+                          />
                         </button>
                         <button className="p-2 hover:bg-slate-600/50 rounded-xl transition-all duration-300">
-                          <span className="text-lg">🗑️</span>
+                          <lord-icon
+                            src="https://cdn.lordicon.com/ssdupzsv.json"
+                            trigger="hover"
+                            colors="primary:#ef4444"
+                            style={{ width: '20px', height: '20px' }}
+                          />
                         </button>
                       </div>
                     </td>

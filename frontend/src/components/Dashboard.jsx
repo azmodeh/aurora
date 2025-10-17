@@ -4,10 +4,10 @@ import { Button } from './ui/button';
 
 const Dashboard = () => {
   const stats = [
-    { label: 'Total Devices', value: '248', change: '+12%', emoji: '🖥️', color: 'teal' },
-    { label: 'Active Tunnels', value: '156', change: '+8%', emoji: '🔗', color: 'purple' },
-    { label: 'Active Users', value: '1,234', change: '+24%', emoji: '👥', color: 'blue' },
-    { label: 'Network Health', value: '98%', change: '+2%', emoji: '✅', color: 'green' }
+    { label: 'Total Devices', value: '248', change: '+12%', icon: 'psnhawjn', color: 'teal' },
+    { label: 'Active Tunnels', value: '156', change: '+8%', icon: 'jvihlqtw', color: 'purple' },
+    { label: 'Active Users', value: '1,234', change: '+24%', icon: 'dxjqoygy', color: 'blue' },
+    { label: 'Network Health', value: '98%', change: '+2%', icon: 'xzksbhzh', color: 'green' }
   ];
 
   const recentActivities = [
@@ -30,8 +30,14 @@ const Dashboard = () => {
                   <h3 className="text-3xl font-bold text-white mb-1">{stat.value}</h3>
                   <span className="text-teal-400 text-sm font-medium">{stat.change}</span>
                 </div>
-                <div className={`w-14 h-14 bg-${stat.color}-500/20 rounded-2xl flex items-center justify-center`}>
-                  <span className="text-3xl">{stat.emoji}</span>
+                <div className="w-14 h-14 bg-slate-700/50 rounded-2xl flex items-center justify-center">
+                  <lord-icon
+                    src={`https://cdn.lordicon.com/${stat.icon}.json`}
+                    trigger="loop"
+                    delay="2000"
+                    colors="primary:#319795"
+                    style={{ width: '36px', height: '36px' }}
+                  />
                 </div>
               </div>
             </CardContent>
@@ -45,7 +51,13 @@ const Dashboard = () => {
         <Card className="lg:col-span-2 bg-slate-800/50 backdrop-blur-lg border-slate-700/50 rounded-2xl">
           <CardHeader>
             <CardTitle className="text-white flex items-center space-x-2">
-              <span className="text-2xl">📊</span>
+              <lord-icon
+                src="https://cdn.lordicon.com/xzksbhzh.json"
+                trigger="loop"
+                delay="3000"
+                colors="primary:#319795"
+                style={{ width: '28px', height: '28px' }}
+              />
               <span>Network Activity</span>
             </CardTitle>
           </CardHeader>
@@ -60,7 +72,13 @@ const Dashboard = () => {
         <Card className="bg-slate-800/50 backdrop-blur-lg border-slate-700/50 rounded-2xl">
           <CardHeader>
             <CardTitle className="text-white flex items-center space-x-2">
-              <span className="text-2xl">📋</span>
+              <lord-icon
+                src="https://cdn.lordicon.com/nocovwne.json"
+                trigger="loop"
+                delay="3000"
+                colors="primary:#319795"
+                style={{ width: '28px', height: '28px' }}
+              />
               <span>Recent Activities</span>
             </CardTitle>
           </CardHeader>
@@ -88,7 +106,12 @@ const Dashboard = () => {
         <Card className="bg-slate-800/50 backdrop-blur-lg border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 cursor-pointer group rounded-2xl">
           <CardContent className="p-6 flex flex-col items-center text-center space-y-3">
             <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center">
-              <span className="text-4xl">🔧</span>
+              <lord-icon
+                src="https://cdn.lordicon.com/gqdnbnwt.json"
+                trigger="hover"
+                colors="primary:#9B59B6"
+                style={{ width: '40px', height: '40px' }}
+              />
             </div>
             <h4 className="text-white font-semibold text-lg">Create New Tunnel</h4>
             <p className="text-slate-400 text-sm">Set up a secure tunnel connection</p>
@@ -101,7 +124,12 @@ const Dashboard = () => {
         <Card className="bg-slate-800/50 backdrop-blur-lg border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 cursor-pointer group rounded-2xl">
           <CardContent className="p-6 flex flex-col items-center text-center space-y-3">
             <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center">
-              <span className="text-4xl">🚀</span>
+              <lord-icon
+                src="https://cdn.lordicon.com/jvihlqtw.json"
+                trigger="hover"
+                colors="primary:#9B59B6"
+                style={{ width: '40px', height: '40px' }}
+              />
             </div>
             <h4 className="text-white font-semibold text-lg">Deploy Application</h4>
             <p className="text-slate-400 text-sm">Deploy a new application instance</p>
@@ -114,7 +142,12 @@ const Dashboard = () => {
         <Card className="bg-slate-800/50 backdrop-blur-lg border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 cursor-pointer group rounded-2xl">
           <CardContent className="p-6 flex flex-col items-center text-center space-y-3">
             <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center">
-              <span className="text-4xl">👤</span>
+              <lord-icon
+                src="https://cdn.lordicon.com/hrjifpbq.json"
+                trigger="hover"
+                colors="primary:#9B59B6"
+                style={{ width: '40px', height: '40px' }}
+              />
             </div>
             <h4 className="text-white font-semibold text-lg">Add User</h4>
             <p className="text-slate-400 text-sm">Create a new user account</p>

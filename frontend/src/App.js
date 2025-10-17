@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
+import TabBar from './components/TabBar';
 import Dashboard from './components/Dashboard';
 import ManagerPage from './components/ManagerPages';
 import NetworkTopology from './components/NetworkTopology';
@@ -30,12 +31,12 @@ function App() {
         return (
           <ManagerPage
             title="App Manager"
-            emoji="📱"
+            icon="wlorhwqa"
             items={mockData.apps}
             actions={[
-              { label: 'Running Apps', count: 24, emoji: '✅' },
-              { label: 'Stopped Apps', count: 8, emoji: '⏸️' },
-              { label: 'Deployments', count: 156, emoji: '🚀' }
+              { label: 'Running Apps', count: 24, icon: 'gqdnbnwt' },
+              { label: 'Stopped Apps', count: 8, icon: 'qhviklyi' },
+              { label: 'Deployments', count: 156, icon: 'jvihlqtw' }
             ]}
           />
         );
@@ -43,12 +44,12 @@ function App() {
         return (
           <ManagerPage
             title="Tunnel Manager"
-            emoji="🔗"
+            icon="jvihlqtw"
             items={mockData.tunnels}
             actions={[
-              { label: 'Active Tunnels', count: 42, emoji: '✅' },
-              { label: 'Inactive Tunnels', count: 12, emoji: '⏸️' },
-              { label: 'Total Bandwidth', count: '2.4TB', emoji: '📊' }
+              { label: 'Active Tunnels', count: 42, icon: 'gqdnbnwt' },
+              { label: 'Inactive Tunnels', count: 12, icon: 'qhviklyi' },
+              { label: 'Total Bandwidth', count: '2.4TB', icon: 'xzksbhzh' }
             ]}
           />
         );
@@ -56,12 +57,12 @@ function App() {
         return (
           <ManagerPage
             title="VPN Manager"
-            emoji="🔒"
+            icon="fihkmjcs"
             items={mockData.vpns}
             actions={[
-              { label: 'Active Connections', count: 89, emoji: '🔐' },
-              { label: 'Available Servers', count: 24, emoji: '🖥️' },
-              { label: 'Security Events', count: 3, emoji: '⚠️' }
+              { label: 'Active Connections', count: 89, icon: 'lecprnjb' },
+              { label: 'Available Servers', count: 24, icon: 'psnhawjn' },
+              { label: 'Security Events', count: 3, icon: 'egiwmiit' }
             ]}
           />
         );
@@ -69,12 +70,12 @@ function App() {
         return (
           <ManagerPage
             title="User Manager"
-            emoji="👥"
+            icon="dxjqoygy"
             items={mockData.users}
             actions={[
-              { label: 'Active Users', count: 234, emoji: '✅' },
-              { label: 'Pending Invites', count: 12, emoji: '📧' },
-              { label: 'Admin Users', count: 8, emoji: '👑' }
+              { label: 'Active Users', count: 234, icon: 'hrjifpbq' },
+              { label: 'Pending Invites', count: 12, icon: 'nocovwne' },
+              { label: 'Admin Users', count: 8, icon: 'eszyyflr' }
             ]}
           />
         );
@@ -87,8 +88,9 @@ function App() {
 
   return (
     <div className={`min-h-screen ${theme === 'dark' ? 'bg-slate-950' : 'bg-slate-50'}`}>
-      <Header theme={theme} toggleTheme={toggleTheme} activeTab={activeTab} setActiveTab={setActiveTab} />
-      <main className="pt-24 px-6 pb-6">
+      <Header theme={theme} toggleTheme={toggleTheme} />
+      <TabBar activeTab={activeTab} setActiveTab={setActiveTab} />
+      <main className="pt-32 px-6 pb-6">
         {renderContent()}
       </main>
     </div>
