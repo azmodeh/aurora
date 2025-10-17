@@ -119,7 +119,7 @@ const Dashboard = () => {
             </div>
             <h4 className="text-white font-semibold text-base">Create New Tunnel</h4>
             <p className="text-slate-500 text-xs">Set up a secure tunnel connection</p>
-            <Button className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-lg text-sm py-2 shadow-lg shadow-purple-500/30">
+            <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm py-2 shadow-lg shadow-purple-500/30">
               Create
             </Button>
           </CardContent>
@@ -138,7 +138,7 @@ const Dashboard = () => {
             </div>
             <h4 className="text-white font-semibold text-base">Deploy Application</h4>
             <p className="text-slate-500 text-xs">Deploy a new application instance</p>
-            <Button className="w-full bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white rounded-lg text-sm py-2 shadow-lg shadow-teal-500/30">
+            <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm py-2 shadow-lg shadow-purple-500/30">
               Deploy
             </Button>
           </CardContent>
@@ -157,7 +157,7 @@ const Dashboard = () => {
             </div>
             <h4 className="text-white font-semibold text-base">Add User</h4>
             <p className="text-slate-500 text-xs">Create a new user account</p>
-            <Button className="w-full bg-gradient-to-r from-purple-600 to-teal-500 hover:from-purple-700 hover:to-teal-600 text-white rounded-lg text-sm py-2 shadow-lg shadow-purple-500/30">
+            <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm py-2 shadow-lg shadow-purple-500/30">
               Add User
             </Button>
           </CardContent>
