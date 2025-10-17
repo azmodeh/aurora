@@ -28,7 +28,7 @@ const NetworkTopology = () => {
   const getNodeColor = (status, load) => {
     if (status === 'critical' || load > 50) return 'red';
     if (status === 'warning' || load > 15) return 'orange';
-    return 'blue';
+    return 'teal';
   };
 
   const getNodeClasses = (status, load) => {
@@ -39,63 +39,67 @@ const NetworkTopology = () => {
     if (status === 'warning' || load > 15) {
       return `${baseClass} w-20 h-20 bg-gradient-to-br from-orange-500/30 to-orange-600/30 border-3 border-orange-500 shadow-lg shadow-orange-500/40`;
     }
-    return `${baseClass} w-16 h-16 bg-gradient-to-br from-blue-500/30 to-blue-600/30 border-3 border-blue-500 shadow-lg shadow-blue-500/40`;
+    return `${baseClass} w-16 h-16 bg-gradient-to-br from-teal-500/30 to-teal-600/30 border-3 border-teal-500 shadow-lg shadow-teal-500/40`;
   };
 
   return (
     <div className="space-y-6">
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card className="bg-[#1a1d2e] border-[#2a2d3e] rounded-xl">
-          <CardContent className="p-5">
+        <Card className="bg-[#1a1a1a] border-[#2a2a2a] rounded-xl relative overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+          <CardContent className="p-5 relative z-10">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-slate-500 text-xs font-medium mb-1">Total Devices</p>
                 <h3 className="text-2xl font-bold text-white">9</h3>
               </div>
-              <div className="w-12 h-12 bg-[#252836] rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-600/20 to-teal-500/20 rounded-xl flex items-center justify-center">
                 <span className="text-2xl">📡</span>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        <Card className="bg-[#1a1d2e] border-[#2a2d3e] rounded-xl">
-          <CardContent className="p-5">
+        <Card className="bg-[#1a1a1a] border-[#2a2a2a] rounded-xl relative overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+          <CardContent className="p-5 relative z-10">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-slate-500 text-xs font-medium mb-1">Links</p>
                 <h3 className="text-2xl font-bold text-white">25</h3>
               </div>
-              <div className="w-12 h-12 bg-[#252836] rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-teal-500/20 to-purple-600/20 rounded-xl flex items-center justify-center">
                 <span className="text-2xl">🔗</span>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        <Card className="bg-[#1a1d2e] border-[#2a2d3e] rounded-xl">
-          <CardContent className="p-5">
+        <Card className="bg-[#1a1a1a] border-[#2a2a2a] rounded-xl relative overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+          <CardContent className="p-5 relative z-10">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-slate-500 text-xs font-medium mb-1">Hosts</p>
                 <h3 className="text-2xl font-bold text-white">9</h3>
               </div>
-              <div className="w-12 h-12 bg-[#252836] rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-600/20 to-teal-500/20 rounded-xl flex items-center justify-center">
                 <span className="text-2xl">🖥️</span>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        <Card className="bg-[#1a1d2e] border-[#2a2d3e] rounded-xl">
-          <CardContent className="p-5">
+        <Card className="bg-[#1a1a1a] border-[#2a2a2a] rounded-xl relative overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+          <CardContent className="p-5 relative z-10">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-slate-500 text-xs font-medium mb-1">Network Health</p>
                 <h3 className="text-2xl font-bold text-white">87%</h3>
               </div>
-              <div className="w-12 h-12 bg-[#252836] rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-teal-500/20 to-purple-600/20 rounded-xl flex items-center justify-center">
                 <span className="text-2xl">✅</span>
               </div>
             </div>
@@ -104,27 +108,29 @@ const NetworkTopology = () => {
       </div>
 
       {/* Topology Map */}
-      <Card className="bg-[#1a1d2e] border-[#2a2d3e] rounded-xl">
+      <Card className="bg-[#1a1a1a] border-[#2a2a2a] rounded-xl relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 via-teal-500 to-purple-600 opacity-50" />
         <CardHeader>
           <CardTitle className="text-white flex items-center justify-between">
-            <span className="text-lg font-bold">Network Topology</span>
+            <span className="text-lg font-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">Network Topology</span>
             <div className="flex items-center space-x-2">
-              <Button className="bg-[#6366f1] hover:bg-[#5558d9] text-white rounded-lg text-sm px-4 py-2">
+              <Button className="bg-gradient-to-r from-purple-600 to-teal-500 hover:from-purple-700 hover:to-teal-600 text-white rounded-lg text-sm px-4 py-2 shadow-lg shadow-purple-500/30">
                 + Add Node
               </Button>
-              <Button variant="outline" className="border-[#2a2d3e] text-slate-300 hover:bg-[#252836] rounded-lg text-sm px-4 py-2">
+              <Button variant="outline" className="border-[#2a2a2a] bg-[#0f0f0f] text-slate-300 hover:bg-gradient-to-r hover:from-purple-600/20 hover:to-teal-500/20 rounded-lg text-sm px-4 py-2">
                 Refresh
               </Button>
             </div>
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="relative h-[600px] bg-[#0f1117] rounded-xl overflow-hidden">
-            {/* Background Map */}
+          <div className="relative h-[600px] bg-[#0a0a0a] rounded-xl overflow-hidden border border-[#2a2a2a]">
+            {/* Background Grid with Aurora effect */}
             <div className="absolute inset-0" style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none'/%3E%3Cpath d='M0 50h100M50 0v100' stroke='%231a1d2e' stroke-width='0.5' opacity='0.3'/%3E%3C/svg%3E")`,
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none'/%3E%3Cpath d='M0 50h100M50 0v100' stroke='%231a1a1a' stroke-width='0.5' opacity='0.5'/%3E%3C/svg%3E")`,
               backgroundSize: '50px 50px'
             }} />
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 via-transparent to-teal-500/5" />
 
             {/* SVG for connections */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none">
@@ -139,10 +145,11 @@ const NetworkTopology = () => {
                     y1={from.y}
                     x2={to.x}
                     y2={to.y}
-                    stroke={isHighLoad ? '#ef4444' : '#3b82f6'}
+                    stroke={isHighLoad ? '#ef4444' : '#14b8a6'}
                     strokeWidth="2"
-                    opacity="0.5"
+                    opacity="0.4"
                     className="transition-all duration-300"
+                    style={{ filter: 'drop-shadow(0 0 2px currentColor)' }}
                   />
                 );
               })}
@@ -164,7 +171,7 @@ const NetworkTopology = () => {
                 <div className="text-center">
                   <div className="text-white font-bold text-lg">{dc.load}%</div>
                   <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                    <span className="text-white text-xs font-medium bg-slate-800/80 px-2 py-1 rounded-lg">
+                    <span className="text-white text-xs font-medium bg-[#1a1a1a] px-2 py-1 rounded-lg border border-[#2a2a2a]">
                       {dc.name}
                     </span>
                   </div>
@@ -173,19 +180,19 @@ const NetworkTopology = () => {
             ))}
 
             {/* Legend */}
-            <div className="absolute top-4 right-4 bg-[#1a1d2e] rounded-xl p-4 border border-[#2a2d3e]">
+            <div className="absolute top-4 right-4 bg-[#1a1a1a] rounded-xl p-4 border border-[#2a2a2a]">
               <h4 className="text-white font-semibold mb-3 text-sm">Status</h4>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-blue-500" />
+                  <div className="w-3 h-3 rounded-full bg-teal-500 shadow-lg shadow-teal-500/50" />
                   <span className="text-slate-400 text-xs">Normal (0-15%)</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-orange-500" />
+                  <div className="w-3 h-3 rounded-full bg-orange-500 shadow-lg shadow-orange-500/50" />
                   <span className="text-slate-400 text-xs">Warning (15-50%)</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500" />
+                  <div className="w-3 h-3 rounded-full bg-red-500 shadow-lg shadow-red-500/50" />
                   <span className="text-slate-400 text-xs">Critical (>50%)</span>
                 </div>
               </div>
