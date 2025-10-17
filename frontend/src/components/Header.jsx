@@ -3,7 +3,7 @@ import { Sun, Moon, Settings } from 'lucide-react';
 
 const Header = ({ theme, toggleTheme }) => {
   return (
-    <header className="h-16 bg-[#1a1a1a] border-b border-[#2a2a2a] fixed top-0 right-0 left-0 z-50 relative">
+    <header className="h-16 bg-[#1a1a1a] border-b border-teal-500/30 fixed top-0 right-0 left-0 z-50 relative">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 via-teal-500/5 to-purple-600/5" />
       <div className="h-full flex items-center justify-between px-6 relative z-10">
         {/* Logo & App Icon */}
@@ -22,7 +22,7 @@ const Header = ({ theme, toggleTheme }) => {
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-[#0f0f0f] hover:bg-gradient-to-r hover:from-purple-600/20 hover:to-teal-500/20 transition-all duration-300 border border-[#2a2a2a]"
+            className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-[#0f0f0f] hover:bg-gradient-to-r hover:from-purple-600/20 hover:to-teal-500/20 transition-all duration-300 border border-teal-500/20"
           >
             {theme === 'dark' ? (
               <>
@@ -45,7 +45,7 @@ const Header = ({ theme, toggleTheme }) => {
           </button>
 
           {/* Settings */}
-          <button className="p-2.5 rounded-lg bg-[#0f0f0f] hover:bg-gradient-to-br hover:from-purple-600/20 hover:to-teal-500/20 transition-all duration-300 border border-[#2a2a2a] group">
+          <button className="p-2.5 rounded-lg bg-[#0f0f0f] hover:bg-gradient-to-br hover:from-purple-600/20 hover:to-teal-500/20 transition-all duration-300 border border-teal-500/20 group">
             <Settings className="w-5 h-5 text-teal-400 group-hover:rotate-90 transition-transform duration-300" />
           </button>
         </div>
