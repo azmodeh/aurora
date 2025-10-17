@@ -19,7 +19,7 @@ const ManagerPage = ({ title, icon, items, actions }) => {
           </div>
           <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">{title}</h2>
         </div>
-        <Button className="bg-gradient-to-r from-purple-600 to-teal-500 hover:from-purple-700 hover:to-teal-600 text-white rounded-lg shadow-lg shadow-purple-500/30">
+        <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-lg shadow-lg shadow-purple-500/30">
           + Add New
         </Button>
       </div>
@@ -27,7 +27,7 @@ const ManagerPage = ({ title, icon, items, actions }) => {
       {/* Action Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {actions.map((action, index) => (
-          <Card key={index} className="bg-[#1a1a1a] border-[#2a2a2a] hover:border-teal-500/50 transition-all duration-300 cursor-pointer group rounded-xl relative overflow-hidden">
+          <Card key={index} className="bg-[#1a1a1a] border-teal-500/30 hover:border-teal-500 transition-all duration-300 cursor-pointer group rounded-xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500" />
             <CardContent className="p-5 relative z-10">
               <div className="flex items-center space-x-4">
@@ -50,7 +50,7 @@ const ManagerPage = ({ title, icon, items, actions }) => {
       </div>
 
       {/* Items Table */}
-      <Card className="bg-[#1a1a1a] border-[#2a2a2a] rounded-xl relative overflow-hidden">
+      <Card className="bg-[#1a1a1a] border-teal-500/30 rounded-xl relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 via-teal-500 to-purple-600 opacity-50" />
         <CardHeader>
           <CardTitle className="text-white text-base">Manage {title}</CardTitle>
@@ -59,7 +59,7 @@ const ManagerPage = ({ title, icon, items, actions }) => {
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="border-b border-[#2a2a2a]">
+                <tr className="border-b border-teal-500/20">
                   <th className="text-left py-3 px-4 text-slate-500 font-medium text-xs">Name</th>
                   <th className="text-left py-3 px-4 text-slate-500 font-medium text-xs">Status</th>
                   <th className="text-left py-3 px-4 text-slate-500 font-medium text-xs">Last Activity</th>
@@ -68,7 +68,7 @@ const ManagerPage = ({ title, icon, items, actions }) => {
               </thead>
               <tbody>
                 {items.map((item, index) => (
-                  <tr key={index} className="border-b border-[#2a2a2a] hover:bg-gradient-to-r hover:from-purple-600/5 hover:to-teal-500/5 transition-all duration-300">
+                  <tr key={index} className="border-b border-teal-500/20 hover:bg-gradient-to-r hover:from-purple-600/5 hover:to-teal-500/5 transition-all duration-300">
                     <td className="py-3 px-4">
                       <div className="flex items-center space-x-3">
                         <div className={`w-2 h-2 rounded-full ${
