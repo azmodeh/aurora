@@ -11,23 +11,23 @@ const TabBar = ({ activeTab, setActiveTab }) => {
   ];
 
   return (
-    <div className="fixed top-16 left-0 right-0 z-40 bg-slate-900/60 backdrop-blur-xl border-b border-slate-700/50">
-      <div className="flex items-center justify-center px-6 py-3 space-x-2">
+    <div className="fixed top-16 left-0 right-0 z-40 bg-[#1a1d2e] border-b border-[#2a2d3e]">
+      <div className="flex items-center justify-center px-6 py-2.5 space-x-1">
         {navItems.map((item) => (
           <button
             key={item.id}
             onClick={() => setActiveTab(item.id)}
-            className={`flex items-center space-x-2 px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 ${
+            className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
               activeTab === item.id
-                ? 'bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-lg shadow-purple-500/40'
-                : 'text-slate-400 hover:text-teal-400 hover:bg-slate-800/50'
+                ? 'bg-[#6366f1] text-white'
+                : 'text-slate-400 hover:text-white hover:bg-[#252836]'
             }`}
           >
             <lord-icon
               src={`https://cdn.lordicon.com/${item.icon}.json`}
               trigger="hover"
-              colors={activeTab === item.id ? 'primary:#ffffff' : 'primary:#319795'}
-              style={{ width: '20px', height: '20px' }}
+              colors={activeTab === item.id ? 'primary:#ffffff' : 'primary:#94a3b8'}
+              style={{ width: '18px', height: '18px' }}
             />
             <span>{item.label}</span>
           </button>
