@@ -11,25 +11,30 @@ const TabBar = ({ activeTab, setActiveTab }) => {
   ];
 
   return (
-    <div className="fixed top-16 left-0 right-0 z-40 bg-[#1a1d2e] border-b border-[#2a2d3e]">
-      <div className="flex items-center justify-center px-6 py-2.5 space-x-1">
+    <div className="fixed top-16 left-0 right-0 z-40 bg-[#1a1a1a] border-b border-[#2a2a2a] relative">
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-600/5 to-transparent" />
+      <div className="flex items-center justify-center px-6 py-2.5 space-x-1 relative z-10">
         {navItems.map((item) => (
           <button
             key={item.id}
             onClick={() => setActiveTab(item.id)}
-            className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
+            className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 relative overflow-hidden group ${
               activeTab === item.id
-                ? 'bg-[#6366f1] text-white'
-                : 'text-slate-400 hover:text-white hover:bg-[#252836]'
+                ? 'bg-gradient-to-r from-purple-600 to-teal-500 text-white shadow-lg shadow-purple-500/30'
+                : 'text-slate-400 hover:text-white'
             }`}
           >
+            {activeTab !== item.id && (
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+            )}
             <lord-icon
               src={`https://cdn.lordicon.com/${item.icon}.json`}
               trigger="hover"
-              colors={activeTab === item.id ? 'primary:#ffffff' : 'primary:#94a3b8'}
+              colors={activeTab === item.id ? 'primary:#ffffff' : 'primary:#14b8a6'}
               style={{ width: '18px', height: '18px' }}
+              className="relative z-10"
             />
-            <span>{item.label}</span>
+            <span className="relative z-10">{item.label}</span>
           </button>
         ))}
       </div>
