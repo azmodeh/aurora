@@ -114,7 +114,7 @@ const NetworkTopology = () => {
           <CardTitle className="text-white flex items-center justify-between">
             <span className="text-lg font-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">Network Topology</span>
             <div className="flex items-center space-x-2">
-              <Button className="bg-gradient-to-r from-purple-600 to-teal-500 hover:from-purple-700 hover:to-teal-600 text-white rounded-lg text-sm px-4 py-2 shadow-lg shadow-purple-500/30">
+              <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm px-4 py-2 shadow-lg shadow-purple-500/30">
                 + Add Node
               </Button>
               <Button variant="outline" className="border-teal-500/30 bg-[#0f0f0f] text-slate-300 hover:bg-gradient-to-r hover:from-purple-600/20 hover:to-teal-500/20 rounded-lg text-sm px-4 py-2">
