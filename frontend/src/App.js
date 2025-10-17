@@ -87,7 +87,7 @@ function App() {
   };
 
   return (
-    <div className={`min-h-screen ${theme === 'dark' ? 'bg-slate-950' : 'bg-slate-50'}`}>
+    <div className={`min-h-screen ${theme === 'dark' ? 'bg-[#0f1117]' : 'bg-slate-50'}`}>
       <Header theme={theme} toggleTheme={toggleTheme} />
       <TabBar activeTab={activeTab} setActiveTab={setActiveTab} />
       <main className="pt-32 px-6 pb-6">
